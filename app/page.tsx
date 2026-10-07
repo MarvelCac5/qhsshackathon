@@ -27,11 +27,13 @@ import {
 } from 'lucide-react'
 
 const members = [
-  { name: 'Maya Chen', role: 'President', bio: 'Builds tiny tools with big opinions about typography.', image: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=500&q=80' },
-  { name: 'Jordan Rivera', role: 'Technical Lead', bio: 'Full-stack tinkerer, robotics nerd, and weekend drummer.', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80' },
-  { name: 'Aisha Okafor', role: 'Community Lead', bio: 'Designs welcoming spaces where first-time hackers thrive.', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80' },
-  { name: 'Eli Park', role: 'Sponsorships', bio: 'Connects curious students with companies doing meaningful work.', image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=500&q=80' },
-  { name: 'Sofia Williams', role: 'Design Director', bio: 'Turns rough ideas into interfaces people want to use.', image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=500&q=80' },
+  { name: 'Qinghan Cheng', role: 'Hack President & Software Lead', bio: 'Lorem Ipsum something something.', image: 'https://qhsshackathon.vercel.app/QinghanHeadshot.jpeg?auto=format&fit=crop&w=500&q=80' },
+  { name: 'Vinny Dong', role: 'Hack Vice President', bio: 'Lorem Ipsum something something.', image: 'https://qhsshackathon.vercel.app/VinnyHeadshot.jpeg?auto=format&fit=crop&w=500&q=80' },
+  { name: 'Farhan Hamim', role: 'Hack Secretary', bio: 'Lorem Ipsum something something.', image: 'https://qhsshackathon.vercel.app/FarhanHeadshot.jpeg?auto=format&fit=crop&w=500&q=80' },
+  { name: 'Aahil Ahsan', role: 'Hack Treasurer', bio: 'Lorem Ipsum something something.', image: 'https://qhsshackathon.vercel.app/AahilHeadshot.jpeg?auto=format&fit=crop&w=500&q=80' },
+  { name: 'Sehaj Singh', role: 'Hack Hardware Lead & Hackathon Programming Director', bio: 'Lorem Ipsum something something.', image: 'https://qhsshackathon.vercel.app/SehajHeadshot.jpeg?auto=format&fit=crop&w=500&q=80' },
+  { name: 'Caleb Castillo', role: 'Hackathon Social Media Director', bio: 'Lorem Ipsum something something.', image: 'https://qhsshackathon.vercel.app/CalebHeadshot.jpeg?auto=format&fit=crop&w=500&q=80' },
+  { name: 'Riddota Raha', role: 'Hackathon Outreach Director', bio: 'Lorem Ipsum something something.', image: 'https://qhsshackathon.vercel.app/RiddotaHeadshot.jpeg?auto=format&fit=crop&w=500&q=80' },
 ]
 
 const gallery = [
