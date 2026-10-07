@@ -129,12 +129,12 @@ function Countdown() {
     </div>
   )
 }
-```[cite: 1]
+`[cite: 1]
 
 ### What changed?
 * **Removed hardcoded state:** The original component started fixed at `42` days and manually ticked seconds down[cite: 1]. 
 * **Dynamic calculation:** It now compares `new Date()` against the target timestamp (`2027-01-20T08:00:00-05:00`) every second.
-* **Accurate math:** It calculates the exact days, hours, minutes, and seconds left until launch time and pads them with leading zeros so the layout remains stable.
+* **Accurate math:** It calculates the exact days, hours, minutes, and seconds left until launch time and pads them with leading zeros so the layout remains stable.##`
 
 export default function Page() {
   const [menuOpen, setMenuOpen] = useState(false)
