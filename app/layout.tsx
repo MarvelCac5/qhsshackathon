@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'QHSS  HACKATHON! - Coming Soon...',
+  title: 'QHSS HACKATHON! - Coming Soon...',
   description: "QHSS's day-long hackathon for curious minds, bold ideas, and the code to bring them to life.",
   generator: 'v0.app',
   icons: {
