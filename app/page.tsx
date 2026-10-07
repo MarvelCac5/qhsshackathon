@@ -93,10 +93,7 @@ function Countdown() {
   const [time, setTime] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
 
   useEffect(() => {
-    // Target: January 20, 2027, at 08:00:00 EDT (UTC-4)
-    // Note: January in EDT is technically EST (UTC-5), but since your UI specifies EDT, 
-    // we set it to 08:00:00 using the standard US Eastern offset (-04:00 or -05:00). 
-    // Using standard ISO string with offset: 2027-01-20T08:00:00-05:00 (EST) or -04:00 (EDT).
+    // Target: January 20, 2027, at 08:00:00 EST/EDT
     const targetDate = new Date('2027-01-20T08:00:00-05:00').getTime()
 
     const updateCountdown = () => {
@@ -129,12 +126,6 @@ function Countdown() {
     </div>
   )
 }
-`[cite: 1]
-
-### What changed?
-* **Removed hardcoded state:** The original component started fixed at `42` days and manually ticked seconds down[cite: 1]. 
-* **Dynamic calculation:** It now compares `new Date()` against the target timestamp (`2027-01-20T08:00:00-05:00`) every second.
-* **Accurate math:** It calculates the exact days, hours, minutes, and seconds left until launch time and pads them with leading zeros so the layout remains stable.##`
 
 export default function Page() {
   const [menuOpen, setMenuOpen] = useState(false)
