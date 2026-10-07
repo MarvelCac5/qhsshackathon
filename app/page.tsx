@@ -45,14 +45,35 @@ const gallery = [
   ['After the awards', 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80'],
 ]
 
+const formatSteps = [
+  ['01', 'Showcase', 'The games and event software built by the Hackathon Software department go on display, alongside games from Hack Software and builds from Hack Hardware. It is where the whole club’s semester of work gets seen.'],
+  ['02', 'Build', 'Teams of 2 to 4 build around the semester’s theme in one of four tracks. The build window follows the familiar hackathon format unless the board changes it: around 5 hours.'],
+  ['03', 'Presentations + prizes', 'Every team presents with its code on screen, explains its choices, and answers judge questions. Scores are tallied and prizes go out at the end.'],
+]
+
+const tracks = [
+  ['DUKCY FIX', 'TBA', 'The theme is announced at the actual event. Every project must explain how it answers that theme.'],
+  ['LEVEL UP', 'Build a game', 'Make it playable by a judge in under two minutes, while still connecting clearly to the theme.'],
+  ['WIRED', 'Build with hardware', 'Use physical hardware where a microcontroller reads or controls something in the real world. Hack Hardware pods compete here.'],
+  ['WILDCARD', 'Build it anyway', 'Does not fit the other three? Go for it, as long as you can justify how it answers the theme.'],
+]
+
+const awards = ['Best First-Time Team', 'Best Justification', 'Crowd Favorite']
+
+const rubric = [
+  ['It works', '25', 'The project runs live, not just in slides.'],
+  ['Justification', '25', 'Why this problem, why this approach, and what the team would change with more time.'],
+  ['Code', '20', 'Readable, and every team member can explain their part.'],
+  ['Theme fit', '15', 'How directly the project answers the semester’s theme.'],
+  ['Presentation', '15', 'Clear, on time, and the demo actually lands.'],
+]
+
 const schedule = [
-  ['09:00', 'Check-in + breakfast', 'Grab a badge, meet your team, and get your first caffeine fix.'],
-  ['10:00', 'Opening ceremony', 'Rules, prompts, prizes, and the official countdown.'],
-  ['11:00', 'Hacking begins', 'Turn the blank canvas into something useful, weird, or both.'],
-  ['14:00', 'Workshop: Ship it', 'A practical session on taking an idea from local to live.'],
-  ['18:30', 'Dinner + mentor rounds', 'Refuel and get unstuck with people who have done this before.'],
-  ['09:00', 'Judging + demos', 'Show the room what you made and why it matters.'],
-  ['11:00', 'Awards + closing', 'Celebrate every launch, learn, and late-night breakthrough.'],
+  ['08:00', 'Check-in + breakfast', 'Grab a badge, meet your team, and get your first caffeine fix.'],
+  ['09:00', 'Opening ceremony', 'Rules, prompts, prizes, and the official countdown.'],
+  ['10:00', 'Build begins', 'Turn the blank canvas into something useful, weird, or both.'],
+  ['15:00', 'Presentations + judging', 'Four minutes to present, two minutes for judge questions.'],
+  ['17:00', 'Showcase + awards', 'See the semester’s work, celebrate every launch, and award the winners.'],
 ]
 
 const faqs = [
@@ -95,9 +116,9 @@ export default function Page() {
 
   return (
     <main>
-      <nav className="nav"><a href="#top" className="brand"><span className="brand-mark">&gt;_</span> BYTE//FEST</a><div className={`nav-links ${menuOpen ? 'open' : ''}`}><a href="#about" onClick={() => setMenuOpen(false)}>About</a><a href="#people" onClick={() => setMenuOpen(false)}>People</a><a href="#schedule" onClick={() => setMenuOpen(false)}>Schedule</a><a href="#sponsors" onClick={() => setMenuOpen(false)}>Sponsors</a><a href="#faq" onClick={() => setMenuOpen(false)}>FAQ</a></div><a href="#register" className="nav-cta">Register <ArrowUpRight size={15} /></a><button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation">{menuOpen ? <X /> : <Menu />}</button></nav>
+      <nav className="nav"><a href="#top" className="brand"><span className="brand-mark">&gt;_</span> BYTE//FEST</a><div className={`nav-links ${menuOpen ? 'open' : ''}`}><a href="#about" onClick={() => setMenuOpen(false)}>About</a><a href="#people" onClick={() => setMenuOpen(false)}>People</a><a href="#format" onClick={() => setMenuOpen(false)}>Format</a><a href="#sponsors" onClick={() => setMenuOpen(false)}>Sponsors</a><a href="#faq" onClick={() => setMenuOpen(false)}>FAQ</a></div><a href="#register" className="nav-cta">Register <ArrowUpRight size={15} /></a><button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation">{menuOpen ? <X /> : <Menu />}</button></nav>
 
-      <section className="hero section-pad" id="top"><div className="hero-orbit" /><div className="hero-grid" /><div className="hero-copy"><div className="eyebrow"><span className="live-dot" />STUDENT HACKATHON / 001</div><h1>Build what<br /><em>matters.</em><span className="cursor">_</span></h1><p className="hero-sub">A 24-hour collision of curious minds, bold ideas, and the code to bring them to life.</p><div className="hero-actions"><a className="button primary" href="#register">Register now <ArrowUpRight size={17} /></a><a className="button secondary" href="#about">Explore the event <ArrowDown size={16} /></a></div><div className="hero-meta"><span><CalendarDays size={15} /> OCT 18—19, 2025</span><span><MapPin size={15} /> NORTHSIDE HIGH / ATLANTA</span><span><Clock3 size={15} /> 24 HOURS</span></div></div><div className="countdown-wrap"><span className="countdown-label">EVENT STARTS IN</span><Countdown /></div></section>
+      <section className="hero section-pad" id="top"><div className="hero-orbit" /><div className="hero-grid" /><div className="hero-copy"><div className="eyebrow"><span className="live-dot" />STUDENT HACKATHON / 001</div><h1>Build what<br /><em>matters.</em><span className="cursor">_</span></h1><p className="hero-sub">A 24-hour collision of curious minds, bold ideas, and the code to bring them to life.</p><div className="hero-actions"><a className="button primary" href="#register">Register now <ArrowUpRight size={17} /></a><a className="button secondary" href="#about">Explore the event <ArrowDown size={16} /></a></div><div className="hero-meta"><span><CalendarDays size={15} /> JAN 20, 2027 / 08:00 EDT</span><span><MapPin size={15} /> NORTHSIDE HIGH / ATLANTA</span><span><Clock3 size={15} /> 5-HOUR BUILD</span></div></div><div className="countdown-wrap"><span className="countdown-label">EVENT STARTS IN</span><Countdown /></div></section>
 
       <section className="section-pad about" id="about"><div className="section-heading"><SectionLabel>01 / ABOUT</SectionLabel><h2>Ideas are only<br /><span>the beginning.</span></h2></div><div className="about-content"><div className="about-intro"><p className="large-copy">Byte//Fest is where students stop waiting for permission and start making things.</p><p>Hosted by Northside Code Club, we bring together high school builders of every skill level for one unforgettable day of learning, collaboration, and shipping. No grades. No gatekeeping. Just a room full of people who want to see what is possible.</p><a className="text-link" href="#register">Get in the room <ArrowRight size={16} /></a></div><div className="stat-grid"><div><b>100<span>+</span></b><small>hackers</small></div><div><b>24</b><small>hours</small></div><div><b>$5K</b><small>in prizes</small></div><div><b>10<span>+</span></b><small>projects launched</small></div></div></div><div className="beginner-card"><div className="icon-box"><Terminal /></div><div><SectionLabel>NEW TO THIS?</SectionLabel><h3>What is a hackathon?</h3><p>It is a creative sprint where you team up, learn something new, and build a project from scratch. Think less “competition” and more “permission to try.”</p></div><ArrowUpRight className="corner-arrow" /></div></section>
 
@@ -105,7 +126,9 @@ export default function Page() {
 
       <section className="section-pad gallery-section" id="gallery"><div className="section-heading split"><div><SectionLabel>03 / FIELD NOTES</SectionLabel><h2>Proof of<br /><span>what happens.</span></h2></div><p className="heading-note">A little archive of late nights,<br />loud laughs, and live demos.</p></div><div className="gallery-grid">{gallery.map(([caption, image], index) => <button className={`gallery-item item-${index}`} key={caption} onClick={() => setLightbox(index)}><img src={image} alt={caption} /><span>{caption} <ArrowUpRight size={14} /></span></button>)}</div></section>
 
-      <section className="section-pad schedule-section" id="schedule"><div className="section-heading"><SectionLabel>04 / THE RUN OF SHOW</SectionLabel><h2>Make time<br /><span>for momentum.</span></h2></div><div className="timeline">{schedule.map(([time, title, description]) => <div className="timeline-item" key={`${time}-${title}`}><div className="timeline-time">{time}</div><div className="timeline-node" /><div className="timeline-copy"><h3>{title}</h3><p>{description}</p></div></div>)}</div></section>
+      <section className="section-pad format-section" id="format"><div className="section-heading"><SectionLabel>04 / THE FORMAT</SectionLabel><h2>Make something<br /><span>worth showing.</span></h2></div><div className="format-steps">{formatSteps.map(([number, title, description]) => <article className="format-step" key={title}><span className="format-number">{number}</span><div><h3>{title}</h3><p>{description}</p></div></article>)}</div><div className="tracks-heading"><SectionLabel>THE FOUR TRACKS</SectionLabel><p>Every team picks one track. Whichever one you choose, your presentation has to explain how the project answers the theme.</p></div><div className="track-grid">{tracks.map(([name, title, description]) => <article className="track-card" key={name}><span className="track-name">{name}</span><h3>{title}</h3><p>{description}</p></article>)}</div><div className="judging-grid"><div><SectionLabel>JUDGING</SectionLabel><h3>4 min present.<br /><span>2 min questions.</span></h3><p>Code has to be on screen at some point. Judges score every team out of 100 on the rubric below.</p><div className="award-list"><p>Special awards</p>{awards.map((award) => <span key={award}>{award}</span>)}</div></div><div className="rubric"><div className="rubric-row rubric-head"><span>Category</span><span>Points</span><span>What judges look for</span></div>{rubric.map(([category, points, criteria]) => <div className="rubric-row" key={category}><strong>{category}</strong><b>{points}</b><span>{criteria}</span></div>)}</div></div></section>
+
+      <section className="section-pad schedule-section" id="schedule"><div className="section-heading split"><div><SectionLabel>05 / THE RUN OF SHOW</SectionLabel><h2>Make time<br /><span>for momentum.</span></h2></div><p className="heading-note">Tentative event date:<br />January 20, 2027 / 08:00 EDT</p></div><div className="timeline">{schedule.map(([time, title, description]) => <div className="timeline-item" key={`${time}-${title}`}><div className="timeline-time">{time}</div><div className="timeline-node" /><div className="timeline-copy"><h3>{title}</h3><p>{description}</p></div></div>)}</div></section>
 
       <section className="section-pad sponsors-section" id="sponsors"><div className="section-heading split"><div><SectionLabel>05 / IN GOOD COMPANY</SectionLabel><h2>Back the<br /><span>next big thing.</span></h2></div><p className="heading-note">Built by students.<br />Supported by believers.</p></div><div className="sponsor-tiers"><div className="tier"><span className="tier-label">GOLD PARTNERS</span><div className="logo-grid"><div><Zap /> NEXUS</div><div><Cpu /> LATTICE</div><div><Sparkles /> NOVA LABS</div></div></div><div className="tier"><span className="tier-label">SILVER PARTNERS</span><div className="logo-grid small"><div>BRIGHT//CO</div><div>STACKHOUSE</div><div>ROOT SYSTEMS</div><div>FORM & FUNCTION</div></div></div><div className="tier"><span className="tier-label">COMMUNITY PARTNERS</span><div className="logo-grid small"><div>ATL TECH</div><div>DEVREL CLUB</div><div>MAKERSPACE</div><div>CODE.ORG</div></div></div></div></section>
 
