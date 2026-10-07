@@ -27,13 +27,10 @@ import {
 } from 'lucide-react'
 
 const members = [
-  { name: 'Qinghan Cheng', role: 'Hack President & Software Lead', bio: 'Lorem Ipsum something something.', image: 'https://qhsshackathon.vercel.app/QinghanHeadshot.jpeg?auto=format&fit=crop&w=500&q=80' },
-  { name: 'Vinny Dong', role: 'Hack Vice President', bio: 'Lorem Ipsum something something.', image: 'https://qhsshackathon.vercel.app/VinnyHeadshot.jpeg?auto=format&fit=crop&w=500&q=80' },
-  { name: 'Farhan Hamim', role: 'Hack Secretary', bio: 'Lorem Ipsum something something.', image: 'https://qhsshackathon.vercel.app/FarhanHeadshot.jpeg?auto=format&fit=crop&w=500&q=80' },
-  { name: 'Aahil Ahsan', role: 'Hack Treasurer', bio: 'Lorem Ipsum something something.', image: 'https://qhsshackathon.vercel.app/AahilHeadshot.jpeg?auto=format&fit=crop&w=500&q=80' },
-  { name: 'Sehaj Singh', role: 'Hack Hardware Lead & Hackathon Programming Director', bio: 'Lorem Ipsum something something.', image: 'https://qhsshackathon.vercel.app/SehajHeadshot.jpeg?auto=format&fit=crop&w=500&q=80' },
-  { name: 'Caleb Castillo', role: 'Hackathon Social Media Director', bio: 'Lorem Ipsum something something.', image: 'https://qhsshackathon.vercel.app/CalebHeadshot.jpeg?auto=format&fit=crop&w=500&q=80' },
-  { name: 'Riddota Raha', role: 'Hackathon Outreach Director', bio: 'Lorem Ipsum something something.', image: 'https://qhsshackathon.vercel.app/RiddotaHeadshot.jpeg?auto=format&fit=crop&w=500&q=80' },
+  { name: 'Qinghan Cheng', role: 'President', bio: 'Lorem Ipsum something something.', image: 'https://qhsshackathon.vercel.app/QinghanHeadshot.png?auto=format&fit=crop&w=500&q=80' },
+  { name: 'Sehaj Singh', role: 'Programming Director', bio: 'Lorem Ipsum something something.', image: 'https://qhsshackathon.vercel.app/SehajHeadshot.png?auto=format&fit=crop&w=500&q=80' },
+  { name: 'Caleb Castillo', role: 'Social Media Director', bio: 'Lorem Ipsum something something.', image: 'https://qhsshackathon.vercel.app/CalebHeadshot.jpeg?auto=format&fit=crop&w=500&q=80' },
+  { name: 'Riddota Raha', role: 'Outreach Director', bio: 'Lorem Ipsum something something.', image: 'https://qhsshackathon.vercel.app/RiddotaHeadshot.png?auto=format&fit=crop&w=500&q=80' },
 ]
 
 const gallery = [
