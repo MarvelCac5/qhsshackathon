@@ -3,8 +3,8 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Byte//Fest — Build what matters.',
-  description: 'A 24-hour high school hackathon for curious minds, bold ideas, and the code to bring them to life.',
+  title: 'QHSS  HACKATHON! - Coming Soon...',
+  description: "QHSS's day-long hackathon for curious minds, bold ideas, and the code to bring them to life.",
   generator: 'v0.app',
   icons: {
     icon: [
