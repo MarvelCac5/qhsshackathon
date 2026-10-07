@@ -90,18 +90,51 @@ function SectionLabel({ children }: { children: string }) {
 }
 
 function Countdown() {
-  const [time, setTime] = useState({ days: 42, hours: 8, minutes: 17, seconds: 33 })
+  const [time, setTime] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
+
   useEffect(() => {
-    const timer = setInterval(() => setTime((current) => {
-      let { days, hours, minutes, seconds } = current
-      if (seconds > 0) seconds -= 1
-      else { seconds = 59; if (minutes > 0) minutes -= 1; else { minutes = 59; if (hours > 0) hours -= 1; else { hours = 23; days = Math.max(0, days - 1) } } }
-      return { days, hours, minutes, seconds }
-    }), 1000)
+    // Target: January 20, 2027, at 08:00:00 EDT (UTC-4)
+    // Note: January in EDT is technically EST (UTC-5), but since your UI specifies EDT, 
+    // we set it to 08:00:00 using the standard US Eastern offset (-04:00 or -05:00). 
+    // Using standard ISO string with offset: 2027-01-20T08:00:00-05:00 (EST) or -04:00 (EDT).
+    const targetDate = new Date('2027-01-20T08:00:00-05:00').getTime()
+
+    const updateCountdown = () => {
+      const now = new Date().getTime()
+      const difference = targetDate - now
+
+      if (difference > 0) {
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24))
+        const hours = Math.floor((difference / (1000 * 60 * 60)) % 24)
+        const minutes = Math.floor((difference / 1000 / 60) % 60)
+        const seconds = Math.floor((difference / 1000) % 60)
+
+        setTime({ days, hours, minutes, seconds })
+      } else {
+        setTime({ days: 0, hours: 0, minutes: 0, seconds: 0 })
+      }
+    }
+
+    updateCountdown()
+    const timer = setInterval(updateCountdown, 1000)
     return () => clearInterval(timer)
   }, [])
-  return <div className="countdown" aria-label="Countdown to event"><span><b>{String(time.days).padStart(2, '0')}</b><small>days</small></span><i>:</i><span><b>{String(time.hours).padStart(2, '0')}</b><small>hrs</small></span><i>:</i><span><b>{String(time.minutes).padStart(2, '0')}</b><small>min</small></span><i>:</i><span><b>{String(time.seconds).padStart(2, '0')}</b><small>sec</small></span></div>
+
+  return (
+    <div className="countdown" aria-label="Countdown to event">
+      <span><b>{String(time.days).padStart(2, '0')}</b><small>days</small></span><i>:</i>
+      <span><b>{String(time.hours).padStart(2, '0')}</b><small>hrs</small></span><i>:</i>
+      <span><b>{String(time.minutes).padStart(2, '0')}</b><small>min</small></span><i>:</i>
+      <span><b>{String(time.seconds).padStart(2, '0')}</b><small>sec</small></span>
+    </div>
+  )
 }
+```[cite: 1]
+
+### What changed?
+* **Removed hardcoded state:** The original component started fixed at `42` days and manually ticked seconds down[cite: 1]. 
+* **Dynamic calculation:** It now compares `new Date()` against the target timestamp (`2027-01-20T08:00:00-05:00`) every second.
+* **Accurate math:** It calculates the exact days, hours, minutes, and seconds left until launch time and pads them with leading zeros so the layout remains stable.
 
 export default function Page() {
   const [menuOpen, setMenuOpen] = useState(false)
