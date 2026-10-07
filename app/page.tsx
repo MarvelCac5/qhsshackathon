@@ -94,7 +94,7 @@ function Countdown() {
 
   useEffect(() => {
     // Target: January 20, 2027, at 08:00:00 EST/EDT
-    const targetDate = new Date('2027-01-20T08:00:00-05:00').getTime()
+    const targetDate = new Date('2027-01-20T08:00:00-04:00').getTime()
 
     const updateCountdown = () => {
       const now = new Date().getTime()
