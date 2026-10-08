@@ -27,10 +27,10 @@ import {
 } from 'lucide-react'
 
 const members = [
-  { name: 'Qinghan Cheng', role: 'President', bio: "Hi guys, my name is Qinghan Cheng. I'm very excited to be the President of Hackathon for the 2026-2027 school year! Let's hope we have a nice year together. Fun fact: I like to draw.", image: 'https://qhsshackathon.vercel.app/QinghanHeadshot.png?auto=format&fit=crop&w=500&q=80' },
-  { name: 'Sehaj Singh', role: 'Programming Director', bio: 'Really excited for the hackathon and the new hack hardware part of hack this year. Fun fact: I like Cha', image: 'https://qhsshackathon.vercel.app/SehajHeadshot.png?auto=format&fit=crop&w=500&q=80' },
-  { name: 'Caleb Castillo', role: 'Social Media Director', bio: 'Lorem Ipsum something something.', image: 'https://qhsshackathon.vercel.app/CalebHeadshot.jpeg?auto=format&fit=crop&w=500&q=80' },
-  { name: 'Riddota Raha', role: 'Outreach Director', bio: 'Lorem Ipsum something something.', image: 'https://qhsshackathon.vercel.app/RiddotaHeadshot.png?auto=format&fit=crop&w=500&q=80' },
+  { name: 'Qinghan Cheng', role: 'President', bio: "Hi guys, my name is Qinghan Cheng. I'm very excited to be the President of Hackathon for the 2026-2027 school year! Let's hope we have a nice year together. Fun fact: I like to draw.", image: 'https://qhsshackathon.github.io/QinghanHeadshot.png?auto=format&fit=crop&w=500&q=80' },
+  { name: 'Sehaj Singh', role: 'Programming Director', bio: 'Really excited for the hackathon and the new hack hardware part of hack this year. Fun fact: I like Cha', image: 'https://qhsshackathon.github.io/SehajHeadshot.png?auto=format&fit=crop&w=500&q=80' },
+  { name: 'Caleb Castillo', role: 'Social Media Director', bio: 'Lorem Ipsum something something.', image: 'https://qhsshackathon.github.io/CalebHeadshot.jpeg?auto=format&fit=crop&w=500&q=80' },
+  { name: 'Riddota Raha', role: 'Outreach Director', bio: 'Lorem Ipsum something something.', image: 'https://qhsshackathon.github.io/RiddotaHeadshot.png?auto=format&fit=crop&w=500&q=80' },
 ]
 
 const gallery = [
