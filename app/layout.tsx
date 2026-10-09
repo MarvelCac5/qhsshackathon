@@ -5,7 +5,6 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'QHSS HACKATHON! - Coming Soon...',
   description: "QHSS's day-long hackathon for curious minds, bold ideas, and the code to bring them to life.",
-  generator: 'v0.app',
   icons: {
     icon: [
       {
@@ -15,10 +14,6 @@ export const metadata: Metadata = {
       {
         url: '/icon-dark-32x32.png',
         media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
       },
     ],
     apple: '/apple-icon.png',
